@@ -1,4 +1,4 @@
-﻿namespace MathLibrary;
+﻿namespace MathLibrary.Math;
 
 /// <summary>
 /// Структура 3d вектор
@@ -14,7 +14,7 @@ public record struct Vector3d(int X, int Y, int Z)
     /// </summary>
     /// <param name="pointA">start point</param>
     /// <param name="pointB">end point</param>
-    public Vector3d(Point3d pointA, Point3d pointB) : 
+    public Vector3d(Point3d pointA, Point3d pointB) :
         this(pointB.X - pointA.X, pointB.Y - pointA.Y, pointB.Z - pointA.Z)
     { }
     #endregion
@@ -78,10 +78,10 @@ public record struct Vector3d(int X, int Y, int Z)
     public static Vector3d operator +(Vector3d a, Vector3d b) => new Vector3d(a.X + b.X, a.Y + b.Y, a.Z + b.Z);
     public static Vector3d operator -(Vector3d a, Vector3d b) => new Vector3d(a.X - b.X, a.Y - b.Y, a.Z - b.Z);
 
-    public static int operator *(Vector3d a, Vector3d b) => Vector3d.DotProduct(a, b);
+    public static int operator *(Vector3d a, Vector3d b) => DotProduct(a, b);
 
     public static Vector3d operator +(Vector3d a, int num) => new Vector3d(a.X + num, a.Y + num, a.Z + num);
-    public static Vector3d operator -(Vector3d a, int num) => a + (-num);
+    public static Vector3d operator -(Vector3d a, int num) => a + -num;
 
     public int this[int index]
     {

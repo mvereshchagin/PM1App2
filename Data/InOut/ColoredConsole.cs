@@ -1,4 +1,4 @@
-﻿namespace MathLibrary;
+﻿namespace MathLibrary.InOut;
 
 public class ColoredConsole : IInOut, IDisposable
 {
@@ -12,12 +12,12 @@ public class ColoredConsole : IInOut, IDisposable
         _initialBackgroundColor = Console.BackgroundColor;
     }
 
-    public ConsoleColor ForegroundColor 
-    { 
+    public ConsoleColor ForegroundColor
+    {
         get => Console.ForegroundColor;
         set => Console.ForegroundColor = value;
     }
-    public ConsoleColor BackgroundColor 
+    public ConsoleColor BackgroundColor
     {
         get => Console.BackgroundColor;
         set => Console.BackgroundColor = value;
@@ -42,7 +42,7 @@ public class ColoredConsole : IInOut, IDisposable
             if (disposing)
             {
                 // TODO: освободить управляемое состояние (управляемые объекты)
-                this.ResetColor();
+                ResetColor();
             }
 
             // TODO: освободить неуправляемые ресурсы (неуправляемые объекты) и переопределить метод завершения

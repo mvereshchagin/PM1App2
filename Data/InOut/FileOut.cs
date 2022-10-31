@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace MathLibrary;
+namespace MathLibrary.InOut;
 
 public class FileOut : IOut
 {

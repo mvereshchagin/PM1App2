@@ -1,4 +1,4 @@
-﻿namespace MathLibrary;
+﻿namespace MathLibrary.InOut;
 
 public interface IOut
 {

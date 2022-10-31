@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace MathLibrary;
+namespace MathLibrary.InOut;
 
 public class ConsoleInOut : IInOut
 {

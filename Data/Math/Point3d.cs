@@ -1,4 +1,4 @@
-﻿namespace MathLibrary;
+﻿namespace MathLibrary.Math;
 
 public record struct Point3d(int X, int Y, int Z)
 {
