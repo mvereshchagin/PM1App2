@@ -1,4 +1,5 @@
 ﻿using MathLibrary;
+using MathLibrary.Delegates;
 using MathLibrary.InOut;
 using MathLibrary.Interfaces;
 using MathLibrary.Math;
@@ -115,11 +116,41 @@ void CoContrVariant()
     
 }
 
+void WorkWithDelegates()
+{
+    WorkWithDelegatesKlass worker = new WorkWithDelegatesKlass();
+    worker.Run();
+
+    //var broadcaster = new Broadcaster2();
+    //broadcaster.AddListener((message, i) =>
+    //{
+    //    Console.WriteLine($"Message {i} received: {message}");
+    //});
+    //broadcaster.AddListener((message, i) =>
+    //{
+    //    Console.WriteLine($"Новое сообщение номер {i} получено: {message}");
+    //});
+    //broadcaster.Run();
+
+    string[] names = { "Наталья", "Роман", "Айше", "Мария", "Арнольд", "Владислав" };
+
+    Console.WriteLine("============================================================");
+    var filteredArray = ArrayUtils.Filter(names, (item) => item.Length > 5);
+    foreach(var item in filteredArray)
+        Console.WriteLine(item);
+
+    Console.WriteLine("============================================================");
+    filteredArray = ArrayUtils.Filter(names, (item) => item.StartsWith("А"));
+    foreach (var item in filteredArray)
+        Console.WriteLine(item);
+}
+
 //WorkWithVectors();
 //WorkWithConsole();
 //WorkWithList();
 //Minipigs();
-CoContrVariant();
+//CoContrVariant();
+WorkWithDelegates();
 
 
 
